@@ -22,14 +22,14 @@ class CreateUsersTable extends Migration
             $table->bigInteger('identification_number');
             $table->bigInteger('account_number')->nullable();
 
-            $table->unsignedInteger('id_person');
-            $table->unsignedInteger('id_role');
-            $table->unsignedInteger('id_state');
+            $table->unsignedBigInteger('id_person');
+            $table->unsignedBigInteger('id_role');
+            $table->unsignedBigInteger('id_state');
 
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('id_person')->references('id')->on('persons');
+            $table->foreign('id_person')->references('id')->on('people');
             $table->foreign('id_role')->references('id')->on('roles');
             $table->foreign('id_state')->references('id')->on('state_users');
         });

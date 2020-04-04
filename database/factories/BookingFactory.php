@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Booking::class, function (Faker $faker) {
     return [
-        'price' => $faker->randomNumber(8),
+        'price' => $faker->randomNumber(6),
         'start_date' => $faker->dateTimeBetween(now(), '2020-08-15 02:00:49', null),
         'end_date' => $faker->dateTimeBetween(now(), '2020-08-15 02:00:49', null),
         'duration_stay' => rand(1,3),

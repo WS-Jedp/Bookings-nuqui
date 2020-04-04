@@ -15,9 +15,9 @@ class CreatePlanHasActivitiesTable extends Migration
     {
         Schema::create('plan_has_activities', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('id_plan');
-            $table->unsignedInteger('id_activity');
-            $table->unsignedInteger('id_activity_state');
+            $table->unsignedBigInteger('id_plan');
+            $table->unsignedBigInteger('id_activity');
+            $table->unsignedBigInteger('id_activity_state');
             $table->dateTime('start_date');
 
             $table->foreign('id_plan')->references('id')->on('plans');

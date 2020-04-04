@@ -9,7 +9,7 @@ $factory->define(Plan::class, function (Faker $faker) {
     return [
         'name' => 'Incursion en la selva',
         'description' => $faker->text(150),
-        'price' => $faker->randomNumber(8),
+        'price' => $faker->randomNumber(6),
         'duration_days' => rand(1, 4),
     ];
 });

@@ -15,7 +15,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        //
+        $myUser = Person::first()->hasUser;
+        return $myUser;
     }
 
     /**

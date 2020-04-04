@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(State_user::class, function (Faker $faker) {
     return [
-        'name' => 'Caminata por la playa'
+        'state' => 'Available'
     ];
 });

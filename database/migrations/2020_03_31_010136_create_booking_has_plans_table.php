@@ -15,8 +15,8 @@ class CreateBookingHasPlansTable extends Migration
     {
         Schema::create('booking_has_plans', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('id_plan');
-            $table->unsignedInteger('id_booking');
+            $table->unsignedBigInteger('id_plan');
+            $table->unsignedBigInteger('id_booking');
             $table->timestamps();
 
             $table->foreign('id_plan')->references('id')->on('plans');

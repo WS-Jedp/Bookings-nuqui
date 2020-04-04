@@ -21,7 +21,7 @@ class CreateCabinsTable extends Migration
             $table->smallInteger('beds_number');
             $table->smallInteger('bathrooms_number');
             $table->double('price', 8, 2);
-            $table->unsignedInteger('id_state');
+            $table->unsignedBigInteger('id_state');
 
             $table->timestamps();
 

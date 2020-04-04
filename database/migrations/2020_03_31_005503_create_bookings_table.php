@@ -20,8 +20,8 @@ class CreateBookingsTable extends Migration
             $table->dateTime('end_date');
             $table->integer('duration_stay');
 
-            $table->unsignedInteger('id_group');
-            $table->unsignedInteger('id_booking_state');
+            $table->unsignedBigInteger('id_group');
+            $table->unsignedBigInteger('id_booking_state');
 
             $table->timestamps();
 

@@ -16,10 +16,10 @@ class CreateGroupsTable extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedInteger('id_state_group');
+            $table->unsignedBigInteger('id_state');
             $table->timestamps();
 
-            $table->foreign('id_state_gorup')->references('id')->on('group_states');
+            $table->foreign('id_state')->references('id')->on('group_states');
         });
     }
 

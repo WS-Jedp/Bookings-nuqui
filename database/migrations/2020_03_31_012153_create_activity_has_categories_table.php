@@ -15,8 +15,8 @@ class CreateActivityHasCategoriesTable extends Migration
     {
         Schema::create('activity_has_categories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('id_category');
-            $table->unsignedInteger('id_activity');
+            $table->unsignedBigInteger('id_category');
+            $table->unsignedBigInteger('id_activity');
 
             $table->foreign('id_category')->references('id')->on('categories');
             $table->foreign('id_activity')->references('id')->on('activities');

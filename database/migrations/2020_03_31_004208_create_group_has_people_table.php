@@ -15,12 +15,12 @@ class CreateGroupHasPeopleTable extends Migration
     {
         Schema::create('group_has_people', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('id_group');
-            $table->unsignedInteger('id_person');
+            $table->unsignedBigInteger('id_group');
+            $table->unsignedBigInteger('id_person');
             $table->timestamps();
 
             $table->foreign('id_group')->references('id')->on('groups');
-            $table->foreign('id_persons')->references('id')->on('persons');
+            $table->foreign('id_person')->references('id')->on('people');
         });
     }
 
