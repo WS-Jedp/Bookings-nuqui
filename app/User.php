@@ -52,4 +52,8 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Activity', 'user_has_activities', 'id_user', 'id_activity');
     }
 
+    public function hasState(){
+        return $this->belongsTo('App\State_user', 'id_state', 'id');
+    }
+
 }
